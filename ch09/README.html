@@ -1,0 +1,38 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>README.md</title>
+      </head>
+      <body>
+        <h1 id="ch09-event-">ch09 event(事件)</h1>
+<h2 id="-">什麼是事件</h2>
+<ul>
+<li>Mouse Events</li>
+<li>Keyboard Events</li>
+<li>Frame/Object Events</li>
+<li>Form Events</li>
+<li>Drag Events</li>
+<li>Clipboard Events</li>
+<li>...</li>
+</ul>
+<h2 id="event-">event物件 告知你當下元素資訊</h2>
+<h2 id="-">各種事件綁定的差異</h2>
+<h2 id="addeventlistener-">addEventListener - 事件監聽</h2>
+<h2 id="-">綁定事件的語法差異</h2>
+<p><code>onclick</code>不能同時綁定兩個事件</p>
+<h2 id="event-bubbling-event-capturing-">Event Bubbling、Event Capturing差異</h2>
+<p><code>element.addEventListener(eventName, func(), true|false);</code></p>
+<ul>
+<li><p>false (事件氣泡 - event Bubbling) - 從指定元素往外層找(比較合乎邏輯，由最近元素來觸發事件)</p>
+<p>  泡泡點下去慢慢往外面跑出來</p>
+</li>
+<li><p>true  (事件捕捉 - event capturing) - 從最外層開始找到指定元素</p>
+<p>  大草原抓小兔子</p>
+</li>
+</ul>
+<p>※ 不寫預設是false</p>
+<h2 id="stoppropagation-">StopPropagation - 中止冒泡事件</h2>
+<p><code>e.stopPropagation(); // 阻止氣泡往外層找。其他監聽不要管，做好我的就好了</code></p>
+
+      </body>
+    </html>
