@@ -37,3 +37,20 @@
 ## StopPropagation - 中止冒泡事件
 
 `e.stopPropagation(); // 阻止氣泡往外層找。其他監聽不要管，做好我的就好了`
+
+## preventDefault - 取消預設觸發行為
+
+取消元素的默認行為。原本點連結會跳轉到指定網頁。
+
+a連結外，submit 按鈕，先透過我的js去查詢表單有無錯誤，post去傳送。
+
+## e.target - 了解目前所在的元素位置
+
+## change - 表單內容更動內容時觸發
+
+變更資料觸發change事件
+
+## keyCode - 點擊鍵盤，射發火箭！
+
+## blur - 離開焦點時進行事件觸發
+
