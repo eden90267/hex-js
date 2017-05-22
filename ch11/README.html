@@ -1,0 +1,49 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>README.md</title>
+      </head>
+      <body>
+        <h1 id="-bom-">瀏覽器功能探索(BOM)</h1>
+<h2 id="-">瀏覽器功能簡介</h2>
+<h3 id="bom-browser-object-model-">BOM (Browser Object Model)</h3>
+<p>window：</p>
+<ul>
+<li><p>history</p>
+<p>  瀏覽的歷史紀錄</p>
+</li>
+<li><p>frames</p>
+<p>  網頁有iframe，可透過該物件操控</p>
+</li>
+<li><p>location</p>
+<p>  瀏覽器瀏覽網頁、網址的相關資訊</p>
+<pre><code>  location.href
+</code></pre></li>
+<li><p>DOM</p>
+<p>  針對Document操作DOM元素</p>
+</li>
+<li><p>screen</p>
+<p>  使用這個載具的寬度與高度</p>
+<pre><code>  screen.width
+</code></pre></li>
+<li><p>navigator</p>
+<p>  瀏覽器版本與相關資訊</p>
+<pre><code>  navigator.onLine // 是不是上網階段
+</code></pre></li>
+</ul>
+<h2 id="-">回上頁功能實作</h2>
+<ul>
+<li><code>window.history.forward()</code></li>
+<li><code>window.history.back()</code></li>
+</ul>
+<h2 id="-js-">透過JS設計列印功能</h2>
+<p>票卷、QRCODE、訂單資訊、發票</p>
+<p><code>location.href = &quot;http://www.yahoo.com.tw&quot;</code></p>
+<h2 id="-innerheight">動態擷取瀏覽器高度 - innerHeight</h2>
+<ul>
+<li><code>window.innerHeight</code></li>
+<li><code>window.outerHeight</code>：整個瀏覽器的高度</li>
+</ul>
+
+      </body>
+    </html>
