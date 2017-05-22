@@ -41,6 +41,16 @@
 <p>變更資料觸發change事件</p>
 <h2 id="keycode-">keyCode - 點擊鍵盤，射發火箭！</h2>
 <h2 id="blur-">blur - 離開焦點時進行事件觸發</h2>
+<h2 id="mouse-">mouse - 當滑鼠滑入指定內容時觸發</h2>
+<h2 id="-screen-page-client-">網頁座標 - 了解screen、page、client箇中差異</h2>
+<ul>
+<li>page, client：是看瀏覽器座標去跑的</li>
+<li>pageY代表整個網頁的高度</li>
+<li>client代表瀏覽器的窗口</li>
+<li>screen是看整個螢幕解析度的</li>
+</ul>
+<h2 id="-">事件監聽優化篇 - 從父元素來監聽子元素內容</h2>
+<p>用父元素監聽，效能比較高，只要綁定一次addEventListener，然後再用e.target.nodeName來區別子元素</p>
 
       </body>
     </html>

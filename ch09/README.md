@@ -54,3 +54,15 @@ a連結外，submit 按鈕，先透過我的js去查詢表單有無錯誤，post
 
 ## blur - 離開焦點時進行事件觸發
 
+## mouse - 當滑鼠滑入指定內容時觸發
+
+## 網頁座標 - 了解screen、page、client箇中差異
+
+- page, client：是看瀏覽器座標去跑的
+- pageY代表整個網頁的高度
+- client代表瀏覽器的窗口
+- screen是看整個螢幕解析度的
+
+## 事件監聽優化篇 - 從父元素來監聽子元素內容
+
+用父元素監聽，效能比較高，只要綁定一次addEventListener，然後再用e.target.nodeName來區別子元素
