@@ -96,6 +96,22 @@ img {
 	background: #559AC8;
 }
 
+.administrative-zone-btn a:nth-child(1):hover, .administrative-zone-btn a:nth-child(1):active {
+	background: #7f75c6;
+}
+
+.administrative-zone-btn a:nth-child(2):hover, .administrative-zone-btn a:nth-child(2):active {
+	background: #dc8e76;
+}
+
+.administrative-zone-btn a:nth-child(3):hover, .administrative-zone-btn a:nth-child(3):active {
+	background: #dbb605;
+}
+
+.administrative-zone-btn a:nth-child(4):hover, .administrative-zone-btn a:nth-child(4):active {
+	background: #4688af;
+}
+
 .separation {
 	border: 1px dashed #559AC8;
 	width: 100%;
