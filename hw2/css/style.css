@@ -133,6 +133,7 @@ img {
 	position: relative;
 	bottom: 10px;
 	width: 4em;
+	text-align: left;
 }
 
 .result-default img {
