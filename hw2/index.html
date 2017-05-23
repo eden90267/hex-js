@@ -28,8 +28,13 @@
 							<li><input type="number" name="kg" id="kg" placeholder="請輸入體重"></li>
 						</ul>
 					</div>
-					<div class="col-xs-12 col-sm-2 text-center">
-						<a id="lookResult" href="#" class="img-circle">看結果</a>
+					<div class="col-xs-12 col-sm-4 text-center">
+						<div class="result"> <!-- if actived result, add "result-default result-ideal" class -->
+							<a href="#" class="img-circle">
+								<span id="result-content">看結果</span>
+							</a>
+							<img src="img/icons_loop.png">
+						</div>
 					</div>
 				</div>
 			</div>
@@ -41,45 +46,83 @@
 					<div class="col-xs-12 col-sm-12">
 						<h2 class="h3 text-center">BMI 紀錄</h2>
 					</div>
-					<div class="col-xs-12 col-sm-8 col-sm-offset-2">
-						<ul class="list-unstyled">
-							<li>
-								<ul class="list-inline log-list log-list-good">
-								    <li>理想</li>
-									<li>BMI</li>
-									<li>20.90</li>
-									<li>weight</li>
-									<li>70kg</li>
-									<li>height</li>
-									<li>180cm</li>
-									<li>06-19-2017</li>
-								</ul>
-							</li>
-							<li>
-								<ul class="list-inline log-list log-list-good">
-								    <li>理想</li>
-									<li>BMI</li>
-									<li>20.90</li>
-									<li>weight</li>
-									<li>70kg</li>
-									<li>height</li>
-									<li>180cm</li>
-									<li>06-19-2017</li>
-								</ul>
-							</li>
-							<li>
-								<ul class="list-inline log-list log-list-good">
-								    <li>理想</li>
-									<li>BMI</li>
-									<li>20.90</li>
-									<li>weight</li>
-									<li>70kg</li>
-									<li>height</li>
-									<li>180cm</li>
-									<li>06-19-2017</li>
-								</ul>
-							</li>
-						</ul>
+					<div class="col-xs-12 col-sm-8 col-xs-offset-0 col-sm-offset-2">
+						<div class="row">
+							<ul class="list-unstyled">
+								<li>
+									<ul class="list-inline log-list log-list-ideal">
+									    <li>理想</li>
+										<li>BMI</li>
+										<li>20.90</li>
+										<li>weight</li>
+										<li>70kg</li>
+										<li>height</li>
+										<li>180cm</li>
+										<li>06-19-2017</li>
+									</ul>
+								</li>
+								<li>
+									<ul class="list-inline log-list log-list-tolight">
+									    <li>過輕</li>
+										<li>BMI</li>
+										<li>20.90</li>
+										<li>weight</li>
+										<li>70kg</li>
+										<li>height</li>
+										<li>180cm</li>
+										<li>06-19-2017</li>
+									</ul>
+								</li>
+								<li>
+									<ul class="list-inline log-list log-list-toheavy">
+									    <li>過重</li>
+										<li>BMI</li>
+										<li>20.90</li>
+										<li>weight</li>
+										<li>70kg</li>
+										<li>height</li>
+										<li>180cm</li>
+										<li>06-19-2017</li>
+									</ul>
+								</li>
+								<li>
+									<ul class="list-inline log-list log-list-lightheavy">
+									    <li>輕度肥胖</li>
+										<li>BMI</li>
+										<li>20.90</li>
+										<li>weight</li>
+										<li>70kg</li>
+										<li>height</li>
+										<li>180cm</li>
+										<li>06-19-2017</li>
+									</ul>
+								</li>
+								<li>
+									<ul class="list-inline log-list log-list-mediumheavy">
+									    <li>中度肥胖</li>
+										<li>BMI</li>
+										<li>20.90</li>
+										<li>weight</li>
+										<li>70kg</li>
+										<li>height</li>
+										<li>180cm</li>
+										<li>06-19-2017</li>
+									</ul>
+								</li>
+								<li>
+									<ul class="list-inline log-list log-list-weightheavy">
+									    <li>重度肥胖</li>
+										<li>BMI</li>
+										<li>20.90</li>
+										<li>weight</li>
+										<li>70kg</li>
+										<li>height</li>
+										<li>180cm</li>
+										<li>06-19-2017</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>

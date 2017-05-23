@@ -37,13 +37,20 @@ img {
 	color: #fff;
 	padding: 6px 6px;
 	margin-bottom: 10px;
+	width: 100%;
 }
 
 .form-list input[type=number]::placeholder  {
 	color: #fff;
 }
 
-#lookResult {
+@media screen and (max-width:767px){
+	.form-list input[type=number] {
+		width: 80%;
+	}
+}
+
+.result a {
 	display: inline-block;
 	width: 120px;
 	height: 120px;
@@ -51,30 +58,207 @@ img {
 	font-size: 24px;
 	color: #424242;
 	text-align: center;
-	line-height: 120px;
 	text-decoration: none;
 	margin-top: 15px;
+	line-height: 15px;
+}
+
+.result a:hover {
+	background: #FFD366;
+	box-shadow: 0 1px 6px 3px rgba(255,195,49,0.64);
+}
+
+.result a:active {
+	background: #DEA921;
+	box-shadow: 0 0 0 0;
+}
+
+.result img {
+	display: none;
+}
+
+.result a span {
+	display: inline-block;
+	margin-top: 50px;
 }
 
 @media screen and (max-width:992px){
-	#lookResult {
+	.result a {
 		width: 100px;
 		height: 100px;
-		line-height: 100px;
 		font-size: 20px;
 		margin-top: 30px;
+	}
+	.result a span {
+		margin-top: 40px;
+	}
+	.result-default a span {
+		margin-top: 35px !important;
 	}
 }
 
 @media screen and (max-width:767px){
-	#lookResult {
+	.result a {
 		width: 120px;
 		height: 120px;
-		line-height: 120px;
 		font-size: 24px;
-		margin-top: 5px;
+		margin-top: 10px;
+	}
+	.result a span {
+		margin-top: 50px;
+	}
+	.result-default a span {
+		margin-top: 45px !important;
 	}
 }
+
+.result-default a {
+	background: #424242;
+}
+
+.result-default a span {
+	margin-top: 45px;
+}
+
+.result-default a::after {
+	content: '\A BMI';
+	font-size: 12px;
+	white-space: pre;
+}
+
+.result-default::after {
+	font-size: 24px;
+	display: inline-block;
+	margin-left: 5px;
+	position: relative;
+	bottom: 10px;
+	width: 4em;
+}
+
+.result-default img {
+	position: absolute;
+	bottom: 7%;
+	left: 45%;
+	display: inline-block;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #424242;
+}
+
+@media screen and (max-width:992px){
+	.result-default img {
+		left: 40%;
+	}
+}
+
+@media screen and (max-width:767px){
+	.result-default img {
+		left: 46%;
+	}
+}
+
+.result-default a:hover {
+	background: #424242;
+	box-shadow: 0 0 0 0;
+}
+
+.result-default a:active {
+	background: #424242;
+	box-shadow: 0 0 0 0;
+}
+
+
+.result-ideal a {
+	border: 5px solid #86D73F;
+	color:  #86D73F;
+}
+.result-ideal img {
+	background-color: #86D73F;
+}
+.result-ideal a::after {
+	color:  #86D73F;
+}
+.result-ideal::after {
+	content: '理想';
+	color:  #86D73F;
+}
+
+.result-tolight a {
+	border: 5px solid #31BAF9;
+	color:  #31BAF9;
+}
+.result-tolight img {
+	background-color: #31BAF9;
+}
+.result-tolight a::after {
+	color:  #31BAF9;
+}
+.result-tolight::after {
+	content: '過輕';
+	color:  #31BAF9;
+}
+
+.result-toheavy a {
+	border: 5px solid #FF982D;
+	color:  #FF982D;
+}
+.result-toheavy img {
+	background-color: #FF982D;
+}
+.result-toheavy a::after {
+	color:  #FF982D;
+}
+.result-toheavy::after {
+	content: '過重';
+	color:  #FF982D;
+}
+
+.result-lightheavy a {
+	border: 5px solid #FF6C02;
+	color:  #FF6C02;
+}
+.result-lightheavy img {
+	background-color: #FF6C02;
+}
+.result-lightheavy a::after {
+	color:  #FF6C02;
+}
+.result-lightheavy::after {
+	content: '輕度肥胖';
+	color:  #FF6C02;
+}
+
+.result-mediumheavy a {
+	border: 5px solid #FF6C02;
+	color:  #FF6C02;
+}
+.result-mediumheavy img {
+	background-color: #FF6C02;
+}
+.result-mediumheavy a::after {
+	color:  #FF6C02;
+}
+.result-mediumheavy::after {
+	content: '中度肥胖';
+	color:  #FF6C02;
+}
+
+.result-weightheavy a {
+	border: 5px solid #FF1200;
+	color:  #FF1200;
+}
+.result-weightheavy img {
+	background-color: #FF1200;
+}
+.result-weightheavy a::after {
+	color:  #FF1200;
+}
+.result-weightheavy::after {
+	content: '重度肥胖';
+	color:  #FF1200;
+}
+
 
 .content {
 	background: rgb(245,245,245);
@@ -88,11 +272,32 @@ img {
 .log-list {
 	background: #fff;
 	line-height: 60px;
+	margin-left:  9px;
 	margin-bottom: 15px;
 }
 
-.log-list-good {
+.log-list-ideal {
 	border-left: 5px solid #86D73F;
+}
+
+.log-list-tolight {
+	border-left: 5px solid #31BAF9;
+}
+
+.log-list-toheavy {
+	border-left: 5px solid #FF982D;
+}
+
+.log-list-lightheavy {
+	border-left: 5px solid #FF6C02;
+}
+
+.log-list-mediumheavy {
+	border-left: 5px solid #FF6C02;
+}
+
+.log-list-weightheavy {
+	border-left: 5px solid #FF1200;
 }
 
 .log-list li:nth-child(1), .log-list li:nth-child(3), .log-list li:nth-child(5), .log-list li:nth-child(7) {
@@ -101,40 +306,51 @@ img {
 
 .log-list li:nth-child(2), .log-list li:nth-child(4), .log-list li:nth-child(6), .log-list li:nth-child(8) {
 	font-size: 12px;
-	margin-left: 60px;
+	margin-left: 50px;
 }
+
+.log-list li:nth-child(1) {
+	width: 4.5em;
+	margin-left: 20px;
+}
+
 
 @media screen and (max-width:1210px){
 	.log-list li:nth-child(2), .log-list li:nth-child(4), .log-list li:nth-child(6), .log-list li:nth-child(8) {
-		margin-left: 30px;
+		margin-left: 20px;
 	}
 }
 
 @media screen and (max-width:992px){
-	.log-list li:nth-child(2), .log-list li:nth-child(4), .log-list li:nth-child(6), .log-list li:nth-child(8) {
-		margin-left: 0;
+	.log-list li:nth-child(1), .log-list li:nth-child(8) {
+		display: block;
 	}
-}
-
-.log-list li:nth-child(1) {
-	margin-left: 10px;
 }
 
 @media screen and (max-width:767px){
 	.log-list li:nth-child(1), .log-list li:nth-child(8) {
-		display: block;
+		margin-left: 10px;
 	}
-	.log-list li:nth-child(1) {
+	.log-list li:nth-child(2), .log-list li:nth-child(4), .log-list li:nth-child(6) {
 		margin-left: 0;
+	}
+	.log-list li:nth-child(2) {
+		margin-left: 10px;
+	}
+	.log-list li:nth-child(3), .log-list li:nth-child(5), .log-list li:nth-child(7) {
+		font-size: 16px;
 	}
 }
 
 .footer {
-	background: #424242;
+	background: #FFD366;
 	padding: 18px 0;
 }
 
 .footer img {
 	width: 55px;
 	height: 55px;
+	background: #424242;
+	padding: 5px;
+	border-radius: 5px;
 }
