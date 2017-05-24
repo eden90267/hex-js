@@ -27,7 +27,7 @@ var model = {
         });
         return result;
     },
-    getZones: function() {
+    getZones: function () {
         var result;
         $.ajax({
             url: 'http://data.kcg.gov.tw/api/action/datastore_search?resource_id=92290ee5-6e61-456f-80c0-249eae2fcc97&fields=%22Zone%22&distinct=true&limit=1000',
@@ -68,7 +68,7 @@ var view = {
         // update pagination
         this.updatePagination();
     },
-    updateRecords: function() {
+    updateRecords: function () {
         var data = model.getData(offset, limit, zone);
         records.innerHTML = data.map(function (item, idx) {
             var result = "";
@@ -104,15 +104,16 @@ var view = {
             return res + item;
         }, "");
     },
-    updatePagination: function() {
+    updatePagination: function () {
         var paginationItems = '';
-        for (var i = 1; i <= (Math.floor(total / 10) + 1); i++) {
-            paginationItems += '<li ' + (Math.floor(offset / 10 + 1) === i ? 'class="active"' : '') + '><a href="#" data-type="num" data-idx="' + i + '">' + i + '</a></li>';
+        console.log(total, controller.getPageTotal());
+        for (var i = 1; i <= controller.getPageTotal(); i++) {
+            paginationItems += '<li ' + (controller.getCurrentPage() === i ? 'class="active"' : '') + '><a href="#" data-type="num" data-idx="' + i + '">' + i + '</a></li>';
         }
         pagination.innerHTML =
-            '<li ' + (Math.floor(offset / 10 + 1) === 1 ? 'class="disabled"' : '') + '><a href="#" data-type="prev">&lt; Prev</a></li>' +
+            '<li ' + (controller.getCurrentPage() === 1 ? 'class="disabled"' : '') + '><a href="#" data-type="prev">&lt; Prev</a></li>' +
             paginationItems +
-            '<li ' + (Math.floor(offset / 10 + 1) === (Math.floor(total / 10) + 1) ? 'class="disabled"' : '') + '><a href="#" data-type="next">&gt; Next</a></li>';
+            '<li ' + (controller.getCurrentPage() === controller.getPageTotal() ? 'class="disabled"' : '') + '><a href="#" data-type="next">&gt; Next</a></li>';
     }
 };
 
@@ -121,7 +122,6 @@ var controller = {
         // selZone
         selZone.addEventListener('change', function (e) {
             if (e.target.value === '') return;
-            console.log(e.target.value);
             zone = e.target.value;
             offset = 1;
             view.updateView();
@@ -142,7 +142,7 @@ var controller = {
             e.preventDefault();
             switch (e.target.dataset.type) {
                 case "prev":
-                    if (Math.floor(offset / 10 + 1) > 1) {
+                    if (this.getCurrentPage() > 1) {
                         offset -= 10;
                         view.updateView();
                     }
@@ -153,7 +153,7 @@ var controller = {
                     view.updateView();
                     break;
                 case "next":
-                    if (Math.floor(offset / 10 + 1) !== (Math.floor(total / 10) + 1)) {
+                    if (this.getCurrentPage() != this.getPageTotal()) {
                         offset += 10;
                         view.updateView();
                     }
@@ -162,7 +162,13 @@ var controller = {
                     console.error("unsupported type!");
                     break;
             }
-        });
+        }.bind(this));
+    },
+    getPageTotal: function () {
+        return Math.floor(total / 10) + ((total % 10 == 0) ? 0 : 1);
+    },
+    getCurrentPage: function () {
+        return Math.floor(offset / 10) + ((offset % 10 == 0) ? 0 : 1);
     }
 };
 
