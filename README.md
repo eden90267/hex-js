@@ -6,7 +6,7 @@
 
 2. [高雄旅遊網](https://eden90267.github.io/hex-js/hw1/)
 
-    Bootstrap、RWD、LocalStorage、Ajax
+    Bootstrap、RWD、Ajax
     
 3. [BMI Calculator](https://eden90267.github.io/hex-js/hw2/)
 
