@@ -93,13 +93,11 @@ var controller = {
                 case 'A':
                 case 'SPAN':
                     if (this.isResult) return;
-                    if (height.value === undefined || height.value === "" || weight.value === undefined || weight.value === "") {
-                        alert('height or weight fields is required!');
-                        return;
+                    if (this.validIsRequired()) {
+                        model.create(height.value, weight.value);
+                        view.updateResult();
+                        this.isResult = true;
                     }
-                    model.create(height.value, weight.value);
-                    view.updateResult();
-                    this.isResult = true;
                     break;
                 case 'IMG': // refresh
                     height.value = "";
@@ -110,8 +108,16 @@ var controller = {
                     this.isResult = false;
                     break;
             }
-        }, false);
+        }.bind(this), false);
+    },
+    validIsRequired: function() {
+        if (height.value === undefined || height.value === "" || weight.value === undefined || weight.value === "") {
+            alert('height and weight fields is required!');
+            return false;
+        }
+        return true;
     }
+
 };
 
 
