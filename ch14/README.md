@@ -26,3 +26,17 @@ Web API：
 
 1. 指引文件
 2. 辭典
+
+AIzaSyATsezx1cvBKJiMFBg8OSuz-oZZ-GbP9mc
+
+## Google Map API原理介紹
+
+## 增加標記
+
+## 新增多個標記
+
+## 標記 + 第三方JSON資料設計
+
+## 繪製客製化Google Map樣式
+
+## 客製化Google Map標記icon

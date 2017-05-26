@@ -11,3 +11,7 @@
 3. [BMI Calculator](https://eden90267.github.io/hex-js/hw2/)
 
     Bootstrap、RWD、LocalStorage
+
+4. [高雄旅遊Googe Map](https://eden90267.github.io/hex-js/ch14/GoogleMap-select-and-json/)
+
+    Google Map API、Ajax、SNAZZY MAPS
