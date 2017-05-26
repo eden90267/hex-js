@@ -140,7 +140,6 @@ area.addEventListener('change', function (e) {
         marker.setMap(null);
     });
     markers = [];
-    infoWindows = [];
     data.forEach(function (item) {
         if (item.Zone === e.target.value) {
             loadData(item.Py, item.Px, item.Picdescribe1)
