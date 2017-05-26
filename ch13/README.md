@@ -22,3 +22,13 @@
 是否可以跨網域撈取資料
 
 [http://www.test-cors.org/](http://www.test-cors.org/)
+
+## 傳統表單輸入介紹
+
+## AJAX POST寫法(提供API練習)
+
+## 從chrome開發人員工具檢視Ajax post
+
+## AJAX JSON傳遞
+
+## AJAX實務範例設計
