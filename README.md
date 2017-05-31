@@ -14,4 +14,4 @@
 
 4. [高雄旅遊Google Map](https://eden90267.github.io/hex-js/ch14/GoogleMap-select-and-json/)
 
-    Google Map API、Ajax、SNAZZY MAPS
+    Google Map API、Ajax、Snazzy Maps
